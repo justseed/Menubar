@@ -1,20 +1,4 @@
 function showlatestpostswiththumbs(json) {
-
-  var XMLHttpRequest,  _;
-  if (typeof exports !== 'undefined') {
-      XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-      _ = require('underscore');
-      btoa = require('btoa');
-  } else {
-      _ = window._;
-  }
-  //prefer native XMLHttpRequest always
-  if (typeof window !== 'undefined' && typeof window.XMLHttpRequest !== 'undefined'){
-      XMLHttpRequest = window.XMLHttpRequest;
-  }
-
-
-
     document.write('<ul class="recent-posts-container">');
     for (var i = 0; i < posts_no; i++) {
         var entry = json.feed.entry[i];
